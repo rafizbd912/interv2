@@ -14,7 +14,16 @@ def two_sum(nums, target):
     List[int]: Indices of the two numbers that add up to the target.
     """
     # YOUR CODE HERE
-    pass
+    num_map = {}
+
+    for i, num in  enumerate(nums):
+        difference = target - num
+        if difference is in num_map:
+            return [num_map[difference], i]
+        num_map[num]=i
+    
+    return []
+            
 
 
 # Question 2
