@@ -18,7 +18,7 @@ def two_sum(nums, target):
 
     for i, num in  enumerate(nums):
         difference = target - num
-        if difference is in num_map:
+        if difference in num_map:
             return [num_map[difference], i]
         num_map[num]=i
     
