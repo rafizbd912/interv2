@@ -42,4 +42,15 @@ def is_valid_parenthesis(s):
     bool: True if the string is valid, False otherwise.
     """
     # YOUR CODE HERE
-    pass
+
+    stack = []
+    mapping = {"(":")", "{":"}","[":"]"}
+
+    for char in s:
+        if char in mapping:
+            top_element = stack.pop() if stack #else '#'
+            if mapping[char]!=top_element:
+                return False
+            else:
+                stack.append(char)
+    return not stack
