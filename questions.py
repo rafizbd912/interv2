@@ -44,7 +44,7 @@ def is_valid_parenthesis(s):
     # YOUR CODE HERE
 
     stack = []
-    mapping = {"(":")", "{":"}","[":"]"}
+    mapping = {")":"(", "}":"{","]":"["}
 
     for char in s:
         if char in mapping:
